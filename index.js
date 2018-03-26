@@ -32,9 +32,6 @@ var updateQueryStringParam = function (key, value) {
 };
 
 $(document).ready(function () {
-	// set antiflag value
-	$("#antiflag-result").val($.urlParam('antiflag'));
-
 	// iter all checked checkbox antiflag
 	$('#antiflag').on("change", "input[type='checkbox']", function () {
 		var res = 0;
@@ -78,6 +75,9 @@ $(document).ready(function () {
 		$("#antiflag-reverse").val(0).change();
 	});
 
+	// set antiflag value
+	$("#antiflag-reverse").val($.urlParam('antiflag')).change();
+
 	/* COPY PASTE OOOOOOOOOOOOOOOOOH*/
 	/* COPY PASTE OOOOOOOOOOOOOOOOOH*/
 	/* COPY PASTE OOOOOOOOOOOOOOOOOH*/
@@ -85,8 +85,6 @@ $(document).ready(function () {
 	/* COPY PASTE OOOOOOOOOOOOOOOOOH*/
 	/* COPY PASTE OOOOOOOOOOOOOOOOOH*/
 	/* COPY PASTE OOOOOOOOOOOOOOOOOH*/
-	// set flag value
-	$("#flag-result").val($.urlParam('flag'));
 
 	// iter all checked checkbox flag
 	$('#flag').on("change", "input[type='checkbox']", function () {
@@ -130,8 +128,9 @@ $(document).ready(function () {
 	$("#flag-reset").click(function() {
 		$("#flag-reverse").val(0).change();
 	});
-	// set wearflag value
-	$("#wearflag-result").val($.urlParam('wearflag'));
+
+	// set flag value
+	$("#flag-reverse").val($.urlParam('flag')).change();
 
 	// iter all checked checkbox wearflag
 	$('#wearflag').on("change", "input[type='checkbox']", function () {
@@ -176,6 +175,8 @@ $(document).ready(function () {
 		$("#wearflag-reverse").val(0).change();
 	});
 
+	// set wearflag value
+	$("#wearflag-reverse").val($.urlParam('wearflag')).change();
 
 });
 
