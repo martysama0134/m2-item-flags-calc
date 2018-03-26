@@ -32,6 +32,11 @@ var updateQueryStringParam = function (key, value) {
 };
 
 $(document).ready(function () {
+	// enable tooltips
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
+
 	// iter all checked checkbox antiflag
 	$('#antiflag').on("change", "input[type='checkbox']", function () {
 		var res = 0;
